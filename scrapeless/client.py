@@ -1,7 +1,7 @@
 import requests
 
 class ScrapelessClient:
-  api_url = "https://gateway.dataship.io/api/v1"
+  api_url = "https://api.scrapeless.com/api/v1"
 
   def __init__(self, api_key: str):
     self.api_key = api_key
