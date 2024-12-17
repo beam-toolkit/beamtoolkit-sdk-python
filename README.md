@@ -2,7 +2,7 @@
 
 ## install
 ```shell
-pip install scrapeless-sdk-python
+pip install scrapeless
 ```
 
 ## Usage

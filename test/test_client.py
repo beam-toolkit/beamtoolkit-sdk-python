@@ -4,7 +4,7 @@ from scrapeless import ScrapelessClient
 
 class TestScrapelessClient(unittest.TestCase):
   def setUp(self):
-    self.api_key = "AC0D22E2D7A64C87C5683D3F6D2CD1AC"
+    self.api_key = "your-api-key"
     self.client = ScrapelessClient(api_key=self.api_key)
 
   @patch("scrapeless.client.requests.post")
