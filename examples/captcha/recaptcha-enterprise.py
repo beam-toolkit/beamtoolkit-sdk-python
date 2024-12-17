@@ -1,39 +1,23 @@
 # if you want to run this example, you need to replace "your-api-key"
-# import sys
-# import os
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
-import time
 from scrapeless import ScrapelessClient
 
 scrapeless = ScrapelessClient(api_key="your-api-key")
 
-def solve_captcha():
+def main():
   actor = "captcha.recaptcha.enterprise"
   input_data = {
     "version": "v3",
-    "pageURL": "https://www.google.com",
-    "siteKey": "6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-",
+    "pageURL": "https://recaptcha-demo.appspot.com/",
+    "siteKey": "6Le80pApAAAAANg24CMbhL_U2PASCW_JUnq5jPys",
     "pageAction": "scraping",
     "invisible": False
   }
 
-  result = scrapeless.captcha(actor, input=input_data)
-  return result
-
-def get_captcha_result(taskId):
-  result = scrapeless.get_captcha_result(taskId)
-  return result
-
-def main():
-  captcha_result = solve_captcha()
-  taskId = captcha_result["taskId"]
-
-  while True:
-    captcha_result = get_captcha_result(taskId)
-    if captcha_result["success"] == True:
-      print(captcha_result)
-      break
-    time.sleep(5)
+  result = scrapeless.solver_captcha(actor, input=input_data, timeout=10)
+  print(result)
 
 main()

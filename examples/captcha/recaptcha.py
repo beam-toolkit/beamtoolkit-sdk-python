@@ -18,11 +18,11 @@ def solve_captcha():
     "pageAction": ""
   }
 
-  result = scrapeless.captcha(actor, input=input_data)
+  result = scrapeless.create_captcha_task(actor, input=input_data)
   return result
 
 def get_captcha_result(taskId):
-  result = scrapeless.get_captcha_result(taskId)
+  result = scrapeless.get_captcha_task_result(taskId)
   return result
 
 def main():

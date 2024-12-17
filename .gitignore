@@ -8,3 +8,6 @@
 */**/*.pyzw
 .vscode
 .idea
+dist
+build
+scrapeless.egg-info

@@ -59,5 +59,5 @@ input_data = {
   "pageAction": ""
 }
 
-result = scrapeless.captcha(actor, input=input_data)
+result = scrapeless.solver_captcha(actor, input=input_data, timeout=10)
 ```
