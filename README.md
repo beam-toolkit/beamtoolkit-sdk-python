@@ -1,4 +1,4 @@
-# Scrapeless Python SDK
+# Beam Toolkit Python SDK
 
 ## install
 ```shell
