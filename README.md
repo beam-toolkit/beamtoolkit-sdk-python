@@ -7,11 +7,9 @@ pip install scrapeless
 
 ## Usage
 
-Start using the API with your [API KEY](https://app.scrapeless.com/dashboard/account?tab=apiKey)
+Start using the API with your API KEY
 
 For more examples, please refer to the `examples` directory
-
-For more information, please refer to our [documentation](https://docs.scrapeless.com/)
 
 ### Scraping API
 ```python
